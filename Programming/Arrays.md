@@ -76,7 +76,7 @@ for (i = 0; i < 10; i++)
 }
 ```
 
-## Initializing arrays
+## Initialising arrays
 
 When you declare an array, the OS finds a uniform block of memory, dividing it by the length of the array. The data however, is completely random data until you declare each element individually.
 
@@ -100,3 +100,42 @@ for (int i = 0; i < MONTHS_N; i++)
     printf("%d ", days[i]);
 }
 ```
+
+## Multi-dimentional arrays
+
+2D arrays have two sets of square brackets `[]`
+
+```c
+type_t array_name [ rows_n ][ columns_n ];
+```
+
+They allow you to store **two or more sets of data** in one
+
+## Initialising Mutli-dimentional arrays
+
+```c
+type_t array_name[ rows_n ][ colums_n ] = { (element_1, element_2), ... };
+```
+
+You can visualise multi-D arrays easier as such:
+
+```c
+// regular way
+int array_1[4][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+
+// easier-to-read way
+int array_2[4][3] = {   1, 2, 3,
+                        4, 5, 6,
+                        7, 8, 9,
+                        10, 11, 12
+                    };
+
+// even-easier-to-read way
+int array_3[4][3] = {   {1, 2, 3},
+                        {4, 5, 6},
+                        {7, 8, 9},
+                        {10, 11, 12}
+                    };
+```
+
+It's better to display multi-D arrays like this as it helps readers visualise how the array will look like in memory
